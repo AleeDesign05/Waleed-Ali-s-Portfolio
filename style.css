@@ -42,10 +42,7 @@ nav  {       color: #000000;
     font-size: 48px;
 }
 nav a:hover { color: var(--accent); }
-.nav-contact{
-    padding-right: 20px;
-    border-radius: 10px;
-}
+
 
 /* Dark mode toggle */
 #toggleTheme { padding: 8px 18px;
@@ -92,15 +89,17 @@ footer { padding: 20px; background: #00b2ff; color: white; text-align: center; m
     .top { padding: 5px 30px; background: #111; color: white;  justify-content: space-between; align-items: center;  top: 0; z-index: 10; }
 nav  { 
     color: white;
-    margin-left: 0px;
+    /* margin-left: 0px; */
     text-decoration: none;
     font-weight: 600;
-    display: flex;
+    display: inline-table;
     margin-top: 16px;
     background-color: gray;
     align-items: center;
     border-radius: 5px;
-padding-bottom: 3px;}
+    padding-bottom: 3px;
+    padding-right: 20px;
+}
     
 nav a:hover { color: var(--accent); }
 header{
@@ -112,9 +111,7 @@ header{
     bottom: 65px;
     background-color: gray;
 }
-.nav-contact{
-    margin-right: 20px;
-}
+
 .title{
     text-align: center;
 }
