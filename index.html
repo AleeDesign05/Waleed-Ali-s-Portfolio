@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+
+   
+
+<header>
+    <div class="top">
+    <h2 class="title">Waleed Ali's Portfolio</h2>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-contact">Contact</a>
+    </nav>
+    <button id="toggleTheme">Dark Mode</button>
+</div>
+    </header>
+    
+    
+    <section class="hero" id="home">
+    <div>
+    <h1>Hello, I'm <span style="color: #ffe600;">Waleed Ali</span></h1>
+    <p>Frontend Developer | HTML & CSS Junior Developer and canvas designs.</p><br>
+    <a href="projects.html" class="btn">View My Work</a>
+    </div>
+    </section>
+    
+    
+    <section class="section" id="about">
+    <h2>About Me</h2>
+    <div class="about-box">
+    <p>
+        I am a <b>frontend developer</b> who specializes in <b>building</b>responsive portfolio and business <b>websites using HTML amd CSS</b>. I focus on creating clean, modern, and user-friendly designs that look great on all devices — from mobile phones to large screens.
+        <br>
+        I have experience <b>updating and improving existing websites</b>, fixing layout issues, enhancing responsiveness, and refining UI/UX details. I am also skilled in <b>designing simple and effective logos</b> that match a brand’s identity.
+        <br>
+        I am a strong <b>Problem Solver</b>, able to understand requirements quickly and apply practical solutions using clean and organized code. I enjoy improving performance, structure, and visual appeal of web pages.
+        <br>
+        Currently, I am <b>learning JavaScript</b> to add interactivity and dynamic features to my projects and continuously improve my frontend skills.
+        <br>
+        I am passionate about web development and always eager to learn, grow, and deliver high-quality results for clients and projects.
+        <br>
+        I create<b> modern and responsive websites using HTML, CSS</b> and simple JavaScript animations. I can design  portfolios websites,good in problem solving and update any business website.</p>
+    </div>
+    </section>
+    
+    
+    <section class="section" id="contact">
+        <div class="contact">
+    <h2>Contact Me</h2>
+    <p style="text-align:center; font-size:1.3rem;">Email: <b>waleedali.4705@gmail.com</b></p>
+</div>
+    </section>
+    
+    
+    <footer>© 2025 Alee Designs | All Rights Reserved</footer>
+    
+    
+    <script>
+    // --- DARK/LIGHT MODE TOGGLE ---
+    const toggle = document.getElementById('toggleTheme');
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    
+    toggle.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    let newTheme = theme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    toggle.textContent = newTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+    });
+    </script>
+    
+    </body>
+</html>

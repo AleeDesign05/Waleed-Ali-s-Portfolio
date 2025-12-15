@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Portfolio</title>
+<style>
+/* --- GLOBAL RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: var(--bg); color: var(--text); transition: 0.3s; }
+
+/* --- THEME COLORS --- */
+:root {
+  --bg: #f4f4f4;
+  --text: #222;
+  --card: #fff;
+  --accent: #00c4ff;
+}
+[data-theme="dark"] {
+  --bg: #0e0e0e;
+  --text: #f5f5f5;
+  --card: #1a1a1a;
+  --accent: #4dd2ff;
+}
+
+/* --- HEADER --- */
+header { padding: 20px 50px; background: #111; color: white; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; }
+nav a:hover { color: var(--accent); }
+
+/* Dark mode toggle */
+#toggleTheme { padding: 8px 18px; background: gray; color: #000; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; }
+
+/* --- HERO SECTION --- */
+.hero { height: 90vh; display: flex; justify-content: center; align-items: center; padding: 0 50px; background: linear-gradient(120deg, #007bff, #00c4ff); color: white; animation: fadeIn 1.2s ease-in-out; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 10px; animation: slideUp 1s; }
+.btn { padding: 12px 25px; background: white; border-radius: 5px; color: #007bff; text-decoration: none; font-weight: 700; }
+
+/* --- ABOUT --- */
+.section { padding: 80px 50px; }
+.section h2 { font-size: 2.5rem; margin-bottom: 30px; text-align: center; }
+.about-box p { font-size: 1.2rem; line-height: 1.7; max-width: 900px; margin: auto; }
+
+/* --- PROJECT CARDS --- */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: auto; }
+.project { background: var(--card); border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); transition: 0.3s; }
+.project:hover { transform: translateY(-8px); box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+
+/* --- FOOTER --- */
+footer { padding: 20px; background: #111; color: white; text-align: center; margin-top: 30px; }
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (max-width:390px){
+  
+#toggleTheme{
+        right: 15px;
+        position: fixed;
+        bottom: 65px;
+
+}
+  }
+
+</style>
+</head>
+<body>
+
+
+    <header>
+        <h2>My Projects</h2>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        </nav>
+        <button id="toggleTheme">Dark Mode</button>
+        </header>
+        
+        
+        <section class="section">
+        <h2>Featured Projects</h2>
+        
+        
+        <div class="project-grid">
+        
+        
+        <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A clean and modern personal portfolio website created using HTML, CSS, and animations.</p>
+        </div>
+        
+        
+        <div class="project">
+        <h3>Business Landing Page</h3>
+        <p>A fully responsive landing page for small businesses using CSS Grid and Flexbox techniques.</p>
+        </div>
+        
+        
+        <div class="project">
+        <h3>Restaurant Website</h3>
+        <p>Designed a fast and minimal website for a local restaurant with menu, gallery, and contact page.</p>
+        </div>
+        
+        
+        <div class="project">
+        <h3>Real Estate Homepage</h3>
+        <p>Built a modern hero section, listings layout, and contact form for a real estate agent.</p>
+        </div>
+        
+        
+        </div>
+        </section>
+        
+        
+        <footer>© 2025 Alee Designs | All Rights Reserved</footer>
+        
+        
+        <script>
+        // THEME SWITCHER
+        const toggle = document.getElementById('toggleTheme');
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        
+        toggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        let newTheme = theme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        toggle.textContent = newTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+        });
+        </script>
+        
+
+</body>
+</html>
