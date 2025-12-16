@@ -24,14 +24,14 @@ nav a {     color: #f6f6f6;
     margin-left: 20px;
     text-decoration: none;
     font-weight: 600;
-background-color: gray; }
+background-color: #00abff; }
 nav  {       color: #000000;
     border-radius: 10px;
-    background-color: gray;
+    background-color: #00abff;
     width: -webkit-fill-available;
     text-align: center;
     font-size: 18px;
-      padding-bottom:3px;
+    padding-bottom: 3px;
 }
  
  .top{
@@ -56,14 +56,16 @@ nav a:hover { color: var(--accent); }
      position: fixed;
      right: 25px;
      bottom: 65px;
-     background-color: gray;
+     background-color: #ffe600;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
      }
+     
 
 
 /* --- HERO SECTION --- */
 .hero { height: 90vh; display: flex; justify-content: center; align-items: center; padding: 0 50px; background: linear-gradient(120deg, #007bff, #00c4ff); color: white; animation: fadeIn 1.2s ease-in-out; }
 .hero h1 { font-size: 3.5rem; margin-bottom: 10px; animation: slideUp 1s; }
-.btn { padding: 12px 25px; background: white; border-radius: 5px; color: #007bff; text-decoration: none; font-weight: 700; }
+.btn { padding: 12px 25px; background: white; border-radius: 5px; color: #007bff; text-decoration: none; font-weight: 700;    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
 
 
 /* --- ABOUT --- */
@@ -86,16 +88,17 @@ footer { padding: 20px; background: #00b2ff; color: white; text-align: center; m
 /* --- ANIMATIONS --- */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+/* iphone 12pro */
 @media (max-width: 390px) {
     .top { padding: 5px 30px; background: #111; color: white;  justify-content: space-between; align-items: center;  top: 0; z-index: 10; }
 nav  { 
     color: white;
-    /* margin-left: 0px; */
+    margin-bottom: 5px;
     text-decoration: none;
     font-weight: 600;
     display: inline-table;
     margin-top: 16px;
-    background-color: gray;
+    background-color: #00abff;
     align-items: center;
     border-radius: 5px;
     padding-bottom: 3px;
@@ -104,17 +107,23 @@ nav  {
     
 nav a:hover { color: var(--accent); }
 header{
-    padding: 14px; 
+    padding: 14px;
+    align-items: center;
+    display: contents;
 }
 #toggleTheme {
     position: fixed;
     right: 25px;
     bottom: 65px;
-    background-color: gray;
+    background-color: #ffe600;
 }
 
 .title{
     text-align: center;
 }
 }
-
+@media (max-width: 375px){
+    nav{
+     align-items: center;   
+    }
+}
